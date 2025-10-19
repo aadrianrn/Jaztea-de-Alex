@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaztea de Alex</title>
+    <link rel="stylesheet" href="stylesin.css">
+  <script src="https://kit.fontawesome.com/b6946db595.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="comienzo">
+        <h1>Jaztea de Alex</h1>
+        <nav>
+        <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            
+            <li><a href="#dias-juntos">Contador</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <article>
+                <h1>Hablemos de Jaztea de Alex...</h1>
+            </article>
+        </section>
+
+<section class="seccion-nosotros" id="nosotros">
+  <div class="contenido-nosotros">
+
+    <!-- Texto -->
+    <div class="texto-nosotros">
+      <h2>Nuestra historia</h2>
+  <p>
+    Nuestra historia comienza un 9 de marzo de 2024, en una fiesta donde por primera vez nos vimos.  
+    Días depués hablamos por instagram, después por whatsapp. Nos conocimos, nos coqueteabamos, tuvimos nuestras primeras citas, hasta que nos convertimos oficialmente en novios el <strong>19 de octubre de ese mismo año</strong>, y desde ese momento, 
+    una historia de amor se escribe. Es por eso que nace <strong>Jaztea de Alex</strong>: un pequeño espacio pensado para guardar recuerdos, pero más que eso, inmortalizar nuestra memoria como pareja, como uno mismo, con cada foto, fecha y sonrisa.  
+    <br><br>
+    Amor, tú que lees esto, hoy más que nunca quiero que tengamos presente que el amor se construye día a día, y que así como hay miles de momentos bonitos, también hay momentos malos. Recordemos que somos más fuertes que eso,  
+    porque lo nuestro está hecho para durar. Siempre voy a estar para tí, porque tu siempre estas para mí.
+    <br><strong>TE AMO 💕</strong>
+  </p>
+    </div>
+
+<div class="video-nosotros">
+  <div class="video-con-overlay">
+    <video src="img/video.mp4" controls disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback"></video>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+
+</section>
+
+ <section class="galeria-fotos">
+  <h2>Detrás de esta página web...</h2>
+        
+  <div class="rejilla-galeria">
+
+    <!-- Foto 1 -->
+    <div class="foto-item">
+      <img src="img/1n.jpg" alt="Foto 1">
+      
+    </div>
+
+  <!-- Foto 1 -->
+    <div class="foto-item">
+      <img src="img/NOTAS.jpg" alt="Foto 1">
+      
+    </div>
+
+     <!-- Foto 1 -->
+    <div class="foto-item">
+      <img src="img/2n.jpg" alt="Foto 1">
+     
+    </div>
+
+     <!-- Foto 1 -->
+    <div class="foto-item">
+      <img src="img/3n.jpg" alt="Foto 1">
+
+    </div>
+
+ <!-- Foto 1 -->
+    <div class="foto-item">
+      <img src="img/4n.jpg" alt="Foto 1">
+    </div>
+
+</section>
+<!-- Texto -->
+  <section class="seccion-nosotros" id="nosotros">
+    <div class="texto-nosotros">
+      <h2>GRACIAS <3 </h2>
+  
+    </div>
+</section>
+
+        <div class="contador-container">
+    <h2>Tiempo contigo</h2>
+    <p>Llevamos juntos:</p>
+    <h1 id="dias-juntos">0 días</h1>
+    <p>Desde el 19 de octubre del 2024...</p>
+  </div>
+
+<section class="volver-inicio">
+  <a href="#comienzo">Volver al comienzo</a>
+</section>
+
+ 
+
+<footer>
+    <section class="insta">
+        <article>
+            <a  target="_blank" href="https://www.instagram.com/jaztea_de_alex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        </article>
+        <p>&copy;2025 Jaztea de Alex.</p>
+    </section>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Fecha: 19 de octubre de 2024
+      const fechaInicio = new Date("2024-10-19T00:00:00");  
+
+      const hoy = new Date();
+
+      
+      fechaInicio.setHours(0, 0, 0, 0);
+      hoy.setHours(0, 0, 0, 0);
+
+      const diferencia = hoy - fechaInicio;
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+      
+      const diasMostrados = dias >= 0 ? dias : 0;
+
+      document.getElementById("dias-juntos").textContent = `${diasMostrados} días`;
+    });
+  </script>
+    
+</body>
+</html>
