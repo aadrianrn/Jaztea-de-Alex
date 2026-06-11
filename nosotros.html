@@ -36,7 +36,7 @@
   <p>
     Nuestra historia comienza un 9 de marzo de 2024, en una fiesta donde por primera vez nos vimos.  
     Días depués hablamos por instagram, después por whatsapp. Nos conocimos, nos coqueteabamos, tuvimos nuestras primeras citas, hasta que nos convertimos oficialmente en novios el <strong>19 de octubre de ese mismo año</strong>, y desde ese momento, 
-    una historia de amor se escribe. Es por eso que nace <strong>Jaztea de Alex</strong>: un pequeño espacio pensado para guardar recuerdos, pero más que eso, inmortalizar nuestra memoria como pareja, como uno mismo, con cada foto, fecha y sonrisa.  
+    una historia de amor se escribe. <strong>Jaztea de Alex</strong> se crea como un pequeño espacio pensado para guardar recuerdos, pero más que eso, inmortalizar nuestra memoria como pareja.  
     <br><br>
     Amor, tú que lees esto, hoy más que nunca quiero que tengamos presente que el amor se construye día a día, y que así como hay miles de momentos bonitos, también hay momentos malos. Recordemos que somos más fuertes que eso,  
     porque lo nuestro está hecho para durar. Siempre voy a estar para tí, porque tu siempre estas para mí.
@@ -115,30 +115,32 @@
         <article>
             <a  target="_blank" href="https://www.instagram.com/jaztea_de_alex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
         </article>
-        <p>&copy;2025 Jaztea de Alex.</p>
+        <p>&copy;2026 Jaztea de Alex.</p>
     </section>
 </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Fecha: 19 de octubre de 2024
-      const fechaInicio = new Date("2024-10-19T00:00:00");  
+document.addEventListener("DOMContentLoaded", function () {
+  const fechaInicio = new Date("2024-10-19T00:00:00");
 
-      const hoy = new Date();
+  function actualizarContador() {
+    const ahora = new Date();
 
-      
-      fechaInicio.setHours(0, 0, 0, 0);
-      hoy.setHours(0, 0, 0, 0);
+    const diferencia = ahora - fechaInicio;
 
-      const diferencia = hoy - fechaInicio;
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-      
-      const diasMostrados = dias >= 0 ? dias : 0;
+    document.getElementById("dias-juntos").textContent =
+      `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+  }
 
-      document.getElementById("dias-juntos").textContent = `${diasMostrados} días`;
-    });
-  </script>
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
+});
+</script>
     
 </body>
 </html>

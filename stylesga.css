@@ -265,3 +265,7 @@ body {
     transform: translateY(0);
   }
 }
+
+strong {
+  --color-tinto: #7b1e1e;
+}

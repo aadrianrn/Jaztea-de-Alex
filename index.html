@@ -33,8 +33,8 @@
 
     <!-- Foto 1 -->
     <div class="foto-item">
-      <img src="img/beso-musa.jpeg" alt="Foto 1">
-      <p class="fecha-foto">Deseo que nuestos besos sean eternos</p>
+      <img src="img/46.jpeg" alt="Foto 1">
+      <p class="fecha-foto">Marido y mujer</p>
     </div>
 
  <!-- Foto 2 -->
@@ -43,20 +43,29 @@
       <p class="fecha-foto">La mejor novia del mundo</p>
     </div>
 
+  
+
+
+
 </section>
 
     </main>
    
-
+<div class="contador-container">
+    <h2>Nuestra Playlist ❤️</h2>
+   
 <div class="spotify-mini">
-  <iframe 
-    src="https://open.spotify.com/embed/track/0JsCnQ0xGg6zE7WZkBD9hA?utm_source=generator"
+  <iframe
+    allow="autoplay *; encrypted-media *;"
     frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-    loading="lazy">
+    height="450"
+    style="width:100%;overflow:hidden;background:transparent;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.music.apple.com/mx/playlist/oye-miamor/pl.u-8aAVZg9SvyEK90r?app=music">
   </iframe>
 </div>
-
+ 
+</div> 
 
 
 <div class="contador-container">
@@ -65,6 +74,11 @@
     <h1 id="dias-juntos">0 días</h1>
     <p>Desde el 19 de octubre del 2024...</p>
   </div>
+
+
+
+
+  
 
 <section class="volver-inicio">
   <a href="#comienzo">Volver al comienzo</a>
@@ -78,31 +92,33 @@
         <article>
             <a  target="_blank" href="https://www.instagram.com/jaztea_de_alex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
         </article>
-        <p>&copy;2025 Jaztea de Alex.</p>
+        <p>&copy;2026 Jaztea de Alex.</p>
     </section>
 </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Fecha: 19 de octubre de 2024
-      const fechaInicio = new Date("2024-10-19T00:00:00");  
+  
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fechaInicio = new Date("2024-10-19T00:00:00");
 
-      const hoy = new Date();
+  function actualizarContador() {
+    const ahora = new Date();
 
-      
-      fechaInicio.setHours(0, 0, 0, 0);
-      hoy.setHours(0, 0, 0, 0);
+    const diferencia = ahora - fechaInicio;
 
-      const diferencia = hoy - fechaInicio;
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-      
-      const diasMostrados = dias >= 0 ? dias : 0;
+    document.getElementById("dias-juntos").textContent =
+      `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+  }
 
-      document.getElementById("dias-juntos").textContent = `${diasMostrados} días`;
-    });
-  </script>
-    
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
+});
+</script>
 
 
 
